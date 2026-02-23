@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { geminiService } from '../services/geminiService';
+import { groqService } from '../services/groqService';
 import { CRISIS_KEYWORDS } from '../constants';
 import { ChatMessage } from '../types';
 
@@ -35,7 +35,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ triggerCrisis }) => {
 
     const userText = input;
     setInput("");
-    
+
     // Optimistic User Message
     const userMsg: ChatMessage = { id: Date.now().toString(), role: 'user', text: userText };
     setMessages(prev => [...prev, userMsg]);
@@ -55,9 +55,9 @@ const Chatbot: React.FC<ChatbotProps> = ({ triggerCrisis }) => {
     setIsLoading(true);
 
     try {
-      const history = messages.map(m => ({ role: m.role, parts: m.text }));
-      const responseText = await geminiService.sendMessage(history, userText);
-      
+      const history = messages.map(m => ({ role: m.role, text: m.text }));
+      const responseText = await groqService.sendMessage(history, userText);
+
       const modelMsg: ChatMessage = {
         id: (Date.now() + 1).toString(),
         role: 'model',
@@ -101,25 +101,24 @@ const Chatbot: React.FC<ChatbotProps> = ({ triggerCrisis }) => {
           <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-gray-900">
             {messages.map((msg) => (
               <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm ${
-                  msg.role === 'user' 
-                    ? 'bg-primary text-white rounded-br-none' 
-                    : msg.isCrisis 
+                <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm ${msg.role === 'user'
+                    ? 'bg-primary text-white rounded-br-none'
+                    : msg.isCrisis
                       ? 'bg-red-100 text-red-900 border border-red-200'
                       : 'bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100 shadow-sm rounded-bl-none border border-gray-100 dark:border-gray-600'
-                }`}>
+                  }`}>
                   {msg.text}
                 </div>
               </div>
             ))}
             {isLoading && (
-               <div className="flex justify-start">
-                 <div className="bg-white dark:bg-gray-700 rounded-2xl rounded-bl-none px-4 py-3 shadow-sm flex space-x-1">
-                   <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                   <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                   <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                 </div>
-               </div>
+              <div className="flex justify-start">
+                <div className="bg-white dark:bg-gray-700 rounded-2xl rounded-bl-none px-4 py-3 shadow-sm flex space-x-1">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                </div>
+              </div>
             )}
             <div ref={messagesEndRef} />
           </div>
@@ -134,7 +133,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ triggerCrisis }) => {
                 placeholder="Type a message..."
                 className="flex-1 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm"
               />
-              <button 
+              <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
                 className="bg-primary disabled:opacity-50 text-white p-2 rounded-full hover:bg-primary-dark transition-colors"
