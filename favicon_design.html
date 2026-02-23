@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mindbridge Favicon Design System</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a64ff",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1623",
+                        "mindbridge-blue": "#0a64ff",
+                        "deep-navy": "#004ec2",
+                        "near-white": "#f9fafb"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .logo-symbol {
+            background: linear-gradient(135deg, #0a64ff 0%, #004ec2 100%);
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 80 V30 L50 60 L80 30 V80 M20 80 Q50 40 80 80' fill='none' stroke='black' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 80 V30 L50 60 L80 30 V80 M20 80 Q50 40 80 80' fill='none' stroke='black' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between px-4 h-16 max-w-md mx-auto">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Design System</h1>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">share</span>
+</button>
+</div>
+</nav>
+<main class="max-w-md mx-auto pb-32">
+<!-- Hero Section -->
+<section class="p-6">
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="aspect-square flex flex-col items-center justify-center p-12 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-50 to-white dark:from-blue-900/10 dark:to-slate-900">
+<div aria-label="Mindbridge Logo Symbol" class="w-32 h-32 logo-symbol" role="img"></div>
+<div class="mt-8 text-center">
+<h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">The Symbol</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2 max-w-[240px]">A minimalist blend of the letter 'M' and a supportive bridge arch.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Favicon Previews -->
+<section class="px-6 py-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Favicon Previews</h3>
+<span class="text-xs font-semibold uppercase tracking-wider text-primary px-2 py-1 bg-primary/10 rounded">Legibility Test</span>
+</div>
+<div class="space-y-4">
+<!-- Light Background Row -->
+<div class="bg-near-white dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest">On Light Background</p>
+<div class="flex items-end justify-around">
+<div class="flex flex-col items-center gap-3">
+<div class="w-4 h-4 logo-symbol"></div>
+<span class="text-[10px] font-medium text-slate-500">16px</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-8 h-8 logo-symbol"></div>
+<span class="text-[10px] font-medium text-slate-500">32px</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-12 h-12 logo-symbol"></div>
+<span class="text-[10px] font-medium text-slate-500">48px</span>
+</div>
+</div>
+</div>
+<!-- Dark Background Row -->
+<div class="bg-deep-navy p-4 rounded-xl border border-white/10">
+<p class="text-xs font-bold text-white/40 mb-4 uppercase tracking-widest">On Dark Background</p>
+<div class="flex items-end justify-around">
+<div class="flex flex-col items-center gap-3">
+<div class="w-4 h-4 bg-white" style="mask: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M20 80 V30 L50 60 L80 30 V80 M20 80 Q50 40 80 80%22 fill=%22none%22 stroke=%22black%22 stroke-width=%2212%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E') no-repeat center; -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M20 80 V30 L50 60 L80 30 V80 M20 80 Q50 40 80 80%22 fill=%22none%22 stroke=%22black%22 stroke-width=%2212%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E') no-repeat center;"></div>
+<span class="text-[10px] font-medium text-white/60">16px</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-8 h-8 bg-white" style="mask: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M20 80 V30 L50 60 L80 30 V80 M20 80 Q50 40 80 80%22 fill=%22none%22 stroke=%22black%22 stroke-width=%2212%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E') no-repeat center; -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M20 80 V30 L50 60 L80 30 V80 M20 80 Q50 40 80 80%22 fill=%22none%22 stroke=%22black%22 stroke-width=%2212%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E') no-repeat center;"></div>
+<span class="text-[10px] font-medium text-white/60">32px</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-12 h-12 bg-white" style="mask: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M20 80 V30 L50 60 L80 30 V80 M20 80 Q50 40 80 80%22 fill=%22none%22 stroke=%22black%22 stroke-width=%2212%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E') no-repeat center; -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M20 80 V30 L50 60 L80 30 V80 M20 80 Q50 40 80 80%22 fill=%22none%22 stroke=%22black%22 stroke-width=%2212%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E') no-repeat center;"></div>
+<span class="text-[10px] font-medium text-white/60">48px</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Color Palette -->
+<section class="px-6 py-4">
+<h3 class="text-xl font-bold mb-4">Color Palette</h3>
+<div class="grid grid-cols-1 gap-3">
+<!-- Swatch 1 -->
+<div class="flex items-center p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="size-12 rounded-full bg-mindbridge-blue shadow-inner border border-black/5"></div>
+<div class="ml-4 flex-1">
+<p class="text-sm font-bold">Mindbridge Blue</p>
+<code class="text-xs text-slate-500 font-mono">#0A64FF</code>
+</div>
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">content_copy</span>
+</button>
+</div>
+<!-- Swatch 2 -->
+<div class="flex items-center p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="size-12 rounded-full bg-deep-navy shadow-inner border border-black/5"></div>
+<div class="ml-4 flex-1">
+<p class="text-sm font-bold">Deep Navy</p>
+<code class="text-xs text-slate-500 font-mono">#004EC2</code>
+</div>
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">content_copy</span>
+</button>
+</div>
+<!-- Swatch 3 -->
+<div class="flex items-center p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="size-12 rounded-full bg-near-white shadow-inner border border-slate-200 dark:border-slate-700"></div>
+<div class="ml-4 flex-1">
+<p class="text-sm font-bold">Near White</p>
+<code class="text-xs text-slate-500 font-mono">#F9FAFB</code>
+</div>
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">content_copy</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Footer Info -->
+<section class="px-6 py-6 border-t border-slate-200 dark:border-slate-800 mt-4">
+<div class="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/10">
+<span class="material-symbols-outlined text-primary">info</span>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                    The favicon is designed for maximum contrast and legibility at small sizes. Use the SVG master file for web implementation.
+                </p>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 max-w-md mx-auto">
+<div class="flex gap-2 border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md px-4 pb-8 pt-3 shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<div class="flex h-6 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">grid_view</span>
+</div>
+<p class="text-[10px] font-bold leading-normal tracking-tight">Showcase</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-6 items-center justify-center">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-tight">Guidelines</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-6 items-center justify-center">
+<span class="material-symbols-outlined">download</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-tight">Assets</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-6 items-center justify-center">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-tight">System</p>
+</a>
+</div>
+</div>
+</body></html>
